@@ -3,9 +3,46 @@
 @import "./base/variables";
 @import "./base/mixins";
 
-.container {
-  display: block;
-  font-size: 20px;
-  margin: 0;
-  padding: 0;
+.todo-app {
+  font-family: $font;
+  width: 500px;
+  margin: 0 auto;
+  background-color: $grey;
+  .todo-form {
+    width: 95%;
+    margin: 0 auto;
+    border-radius: 20px;
+    background-color: $green;
+    padding: 20px 20px 20px 20px;
+    position: relative;
+    .todo-form__input {
+      &::placeholder {
+        color: white;
+      }
+      width: 100%;
+      height: 65px;
+      color: white;
+      background-color: $ligreen;
+      border: 5px black;
+      border-radius: 10px;
+      font-size: 15px;
+      padding-left: 20px;
+      outline: none;
+    }
+    a {
+      &::before {
+        content: "\e811";
+        font-family: "icons";
+        font-size: 28px;
+        padding: 20px;
+        position: absolute;
+        right: 1%;
+        top: 18%;
+        color: #19ba99;
+
+        border-radius: 50%;
+        background-color: white;
+      }
+    }
+  }
 }
