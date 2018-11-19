@@ -2,7 +2,9 @@
 @import "./base/fonts";
 @import "./base/variables";
 @import "./base/mixins";
-
+body {
+  background-color: $grey;
+}
 .todo-app {
   font-family: $font;
   width: 500px;
@@ -15,11 +17,12 @@
     background-color: $green;
     padding: 20px 20px 20px 20px;
     position: relative;
+    margin-bottom: 25px;
     .todo-form__input {
       &::placeholder {
         color: white;
       }
-      width: 100%;
+      width: 95%;
       height: 65px;
       color: white;
       background-color: $ligreen;
@@ -33,15 +36,63 @@
       &::before {
         content: "\e811";
         font-family: "icons";
-        font-size: 28px;
+        font-size: 25px;
         padding: 20px;
         position: absolute;
-        right: 1%;
-        top: 18%;
+        right: 5%;
+        top: 19%;
         color: #19ba99;
-
         border-radius: 50%;
         background-color: white;
+      }
+    }
+  }
+  .todo-list {
+    padding: 0 35px 0 35px;
+    .line-through {
+      text-decoration: line-through $green;
+    }
+    .todo-list__listitem {
+      margin-bottom: 15px;
+      background-color: white;
+      padding-bottom: 15px;
+      padding-top: 15px;
+      border-radius: 10px;
+
+      display: flex;
+      span {
+        padding-left: 15px;
+        margin-right: auto;
+      }
+
+      .remove::after {
+        content: "\e80f";
+        font-family: "icons";
+        font-size: 25px;
+        color: #bac1be;
+        border-right: 3px solid #ebf0f3;
+        padding-right: 13px;
+      }
+      a {
+        text-decoration: none;
+      }
+      .ok::after {
+        content: "\e810";
+        font-family: "icons";
+        font-size: 21px;
+        border-radius: 50%;
+        border: 2px solid $green;
+        padding: 3px;
+        color: $green;
+        margin-left: 15px;
+        margin-right: 10px;
+      }
+      .ok:hover::after {
+        background-color: $green;
+        color: white;
+      }
+      .remove:hover::after {
+        color: $red;
       }
     }
   }
