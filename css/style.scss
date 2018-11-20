@@ -7,7 +7,7 @@ body {
 }
 .todo-app {
   font-family: $font;
-  width: 500px;
+  width: 90%;
   margin: 0 auto;
   background-color: $grey;
   .todo-form {
@@ -58,7 +58,7 @@ body {
       padding-bottom: 15px;
       padding-top: 15px;
       border-radius: 10px;
-
+      box-shadow: -2px 2px 4px 1px lightgray;
       display: flex;
       span {
         padding-left: 15px;
@@ -76,14 +76,17 @@ body {
       a {
         text-decoration: none;
       }
+      .ok {
+        padding-top: 4px;
+      }
       .ok::after {
         content: "\e810";
         font-family: "icons";
-        font-size: 21px;
+        font-size: 15px;
         border-radius: 50%;
-        border: 2px solid $green;
-        padding: 3px;
-        color: $green;
+        border: 2px solid #19ba99;
+        padding: 5px;
+        color: #19ba99;
         margin-left: 15px;
         margin-right: 10px;
       }
@@ -97,3 +100,8 @@ body {
     }
   }
 }
+// @media screen and (max-width: 600px) {
+//   .todo-form {
+//     width: 500px;
+//   }
+// }
